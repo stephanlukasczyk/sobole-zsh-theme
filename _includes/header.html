@@ -1,0 +1,16 @@
+<aside class="logo">
+
+  {% if page.url == '/index.html' or page.url == '/' %}
+    {% assign link = '/about' %}
+    {% assign prompt = 'About the Author' %}
+  {% else %}
+    {% assign link = '/' %}
+    {% assign prompt = 'Back to Home' %}
+  {% endif %}
+
+  <a href="https://github.com/sobolevn/sobole-zsh-theme">
+    <img src="/assets/touch-icon.png" class="gravatar">
+  </a>
+  <span class="logo-prompt">by @sobolevn</span>
+
+</aside>
