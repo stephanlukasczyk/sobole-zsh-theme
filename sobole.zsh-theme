@@ -19,14 +19,16 @@ else
 fi
 
 PROMPT='
-$(current_venv)$(user_info)$(current_dir) $(vcs_prompt_info)
+$(current_venv)$(user_info)$(current_dir) $(vcs_prompt_info) $(_rprompt)
 $(current_caret) '
 
 PROMPT2='. '
 
-_return_status="%(?..%{$fg[red]%}%? ⚡%{$reset_color%})"
+function _rprompt {
+  _return_status="%(?..%{$fg[red]%}%? ⚡%{$reset_color%})"
 
-RPROMPT='%{$(echotc UP 1)%} $(vcs_status) ${_return_status}%{$(echotc DO 1)%}'
+  echo "$(vcs_status) ${_return_status}"
+}
 
 function current_caret {
   # This function sets caret color and sign
