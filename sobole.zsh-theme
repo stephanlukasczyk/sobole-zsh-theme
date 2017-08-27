@@ -87,7 +87,12 @@ function user_info {
     # So, when you log in as other user, using `su` for example,
     # your shell tells you who you are. Otherwise it stays silent.
     # You should set `$SOBOLE_DEFAULT_USER` somewhere in your `.zshrc`:
-    echo "@$USER "
+    if [[ "$USER" != "root" ]]; then
+      echo "@$USER "
+    else
+      CARET_COLOR="red"
+      echo "%{$fg[$CARET_COLOR]%}@$USER%{$reset_color%} "
+    fi
   fi
 }
 
