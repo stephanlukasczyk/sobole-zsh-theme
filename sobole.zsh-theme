@@ -1,5 +1,9 @@
 #
-# Sobole ZSH Theme
+# Sobole ZSH Theme—customized version
+#
+# Author: Stephan Lukasczyk, github.com/stephanlukasczyk
+#
+# Based on the work of
 #
 # Author: Nikita Sobolev, github.com/sobolevn
 # License: WTFPL
