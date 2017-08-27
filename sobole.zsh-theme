@@ -35,7 +35,7 @@ function current_caret {
   # based on theme and privileges.
   if [[ "$USER" == "root" ]]; then
     CARET_COLOR="red"
-    CARET_SIGN="$"
+    CARET_SIGN="#"
   else
     CARET_SIGN="»"
 
