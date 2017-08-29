@@ -94,6 +94,13 @@ function user_info {
       echo "%{$fg[$CARET_COLOR]%}@$USER%{$reset_color%} "
     fi
   fi
+
+  if [[ -n "$SSH_CLIENT" ]]; then
+    host=$(hostname)
+    echo "%{$FG[004]%}@$host%{$reset_color%} "
+  else
+    echo " "
+  fi
 }
 
 # ----------------------------------------------------------------------------
